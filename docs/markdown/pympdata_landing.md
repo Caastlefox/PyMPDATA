@@ -349,7 +349,6 @@ stepper = Stepper(pyargs(...
 ));
 ```
 </details>
-<details open>
 
 <details>
 <summary>Rust code (click to expand)</summary>
