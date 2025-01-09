@@ -133,13 +133,13 @@
 
                         <label class="view-source-button" for="mod-settings-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">from</span> <span class="nn">pystrict</span> <span class="kn">import</span> <span class="n">strict</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">pystrict</span><span class="w"> </span><span class="kn">import</span> <span class="n">strict</span>
 </span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a>
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="nd">@strict</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="k">class</span> <span class="nc">Settings</span><span class="p">:</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="k">class</span><span class="w"> </span><span class="nc">Settings</span><span class="p">:</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">grid</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="mi">100</span>
@@ -159,7 +159,7 @@
 </span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">zc</span> <span class="o">=</span> <span class="mi">50</span>
 </span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a>
 </span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a>    <span class="nd">@property</span>
-</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>    <span class="k">def</span> <span class="nf">advector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">advector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;constant angular velocity rotational field&quot;&quot;&quot;</span>
 </span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>
 </span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
@@ -181,7 +181,7 @@
 </span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>        <span class="k">return</span> <span class="n">data</span>
 </span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a>
 </span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a>    <span class="nd">@property</span>
-</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>    <span class="k">def</span> <span class="nf">advectee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">advectee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a>        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">)</span>
 </span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>        <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span>
 </span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>            <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
@@ -206,8 +206,8 @@
     </div>
     <a class="headerlink" href="#Settings"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Settings-6"><a href="#Settings-6"><span class="linenos"> 6</span></a><span class="nd">@strict</span>
-</span><span id="Settings-7"><a href="#Settings-7"><span class="linenos"> 7</span></a><span class="k">class</span> <span class="nc">Settings</span><span class="p">:</span>
-</span><span id="Settings-8"><a href="#Settings-8"><span class="linenos"> 8</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+</span><span id="Settings-7"><a href="#Settings-7"><span class="linenos"> 7</span></a><span class="k">class</span><span class="w"> </span><span class="nc">Settings</span><span class="p">:</span>
+</span><span id="Settings-8"><a href="#Settings-8"><span class="linenos"> 8</span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 </span><span id="Settings-9"><a href="#Settings-9"><span class="linenos"> 9</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">grid</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </span><span id="Settings-10"><a href="#Settings-10"><span class="linenos">10</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span>
 </span><span id="Settings-11"><a href="#Settings-11"><span class="linenos">11</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="mi">100</span>
@@ -227,7 +227,7 @@
 </span><span id="Settings-25"><a href="#Settings-25"><span class="linenos">25</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">zc</span> <span class="o">=</span> <span class="mi">50</span>
 </span><span id="Settings-26"><a href="#Settings-26"><span class="linenos">26</span></a>
 </span><span id="Settings-27"><a href="#Settings-27"><span class="linenos">27</span></a>    <span class="nd">@property</span>
-</span><span id="Settings-28"><a href="#Settings-28"><span class="linenos">28</span></a>    <span class="k">def</span> <span class="nf">advector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="Settings-28"><a href="#Settings-28"><span class="linenos">28</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">advector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Settings-29"><a href="#Settings-29"><span class="linenos">29</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;constant angular velocity rotational field&quot;&quot;&quot;</span>
 </span><span id="Settings-30"><a href="#Settings-30"><span class="linenos">30</span></a>
 </span><span id="Settings-31"><a href="#Settings-31"><span class="linenos">31</span></a>        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
@@ -249,7 +249,7 @@
 </span><span id="Settings-47"><a href="#Settings-47"><span class="linenos">47</span></a>        <span class="k">return</span> <span class="n">data</span>
 </span><span id="Settings-48"><a href="#Settings-48"><span class="linenos">48</span></a>
 </span><span id="Settings-49"><a href="#Settings-49"><span class="linenos">49</span></a>    <span class="nd">@property</span>
-</span><span id="Settings-50"><a href="#Settings-50"><span class="linenos">50</span></a>    <span class="k">def</span> <span class="nf">advectee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="Settings-50"><a href="#Settings-50"><span class="linenos">50</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">advectee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Settings-51"><a href="#Settings-51"><span class="linenos">51</span></a>        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">)</span>
 </span><span id="Settings-52"><a href="#Settings-52"><span class="linenos">52</span></a>        <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span>
 </span><span id="Settings-53"><a href="#Settings-53"><span class="linenos">53</span></a>            <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
@@ -272,7 +272,7 @@
 
     </div>
     <a class="headerlink" href="#Settings.__init__"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="Settings.__init__-8"><a href="#Settings.__init__-8"><span class="linenos"> 8</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="Settings.__init__-8"><a href="#Settings.__init__-8"><span class="linenos"> 8</span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 </span><span id="Settings.__init__-9"><a href="#Settings.__init__-9"><span class="linenos"> 9</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">grid</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </span><span id="Settings.__init__-10"><a href="#Settings.__init__-10"><span class="linenos">10</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span>
 </span><span id="Settings.__init__-11"><a href="#Settings.__init__-11"><span class="linenos">11</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="mi">100</span>
@@ -471,7 +471,7 @@
     </div>
     <a class="headerlink" href="#Settings.advector"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Settings.advector-27"><a href="#Settings.advector-27"><span class="linenos">27</span></a>    <span class="nd">@property</span>
-</span><span id="Settings.advector-28"><a href="#Settings.advector-28"><span class="linenos">28</span></a>    <span class="k">def</span> <span class="nf">advector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="Settings.advector-28"><a href="#Settings.advector-28"><span class="linenos">28</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">advector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Settings.advector-29"><a href="#Settings.advector-29"><span class="linenos">29</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;constant angular velocity rotational field&quot;&quot;&quot;</span>
 </span><span id="Settings.advector-30"><a href="#Settings.advector-30"><span class="linenos">30</span></a>
 </span><span id="Settings.advector-31"><a href="#Settings.advector-31"><span class="linenos">31</span></a>        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
@@ -509,7 +509,7 @@
     </div>
     <a class="headerlink" href="#Settings.advectee"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="Settings.advectee-49"><a href="#Settings.advectee-49"><span class="linenos">49</span></a>    <span class="nd">@property</span>
-</span><span id="Settings.advectee-50"><a href="#Settings.advectee-50"><span class="linenos">50</span></a>    <span class="k">def</span> <span class="nf">advectee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="Settings.advectee-50"><a href="#Settings.advectee-50"><span class="linenos">50</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">advectee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="Settings.advectee-51"><a href="#Settings.advectee-51"><span class="linenos">51</span></a>        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">indices</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">)</span>
 </span><span id="Settings.advectee-52"><a href="#Settings.advectee-52"><span class="linenos">52</span></a>        <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span>
 </span><span id="Settings.advectee-53"><a href="#Settings.advectee-53"><span class="linenos">53</span></a>            <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>

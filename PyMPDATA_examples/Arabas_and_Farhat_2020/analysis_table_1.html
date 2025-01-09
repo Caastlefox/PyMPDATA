@@ -79,16 +79,16 @@
 
                         <label class="view-source-button" for="mod-analysis_table_1-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">from</span> <span class="nn">joblib</span> <span class="kn">import</span> <span class="n">Parallel</span><span class="p">,</span> <span class="n">delayed</span><span class="p">,</span> <span class="n">parallel_backend</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="kn">from</span> <span class="nn">PyMPDATA_examples.Arabas_and_Farhat_2020.analysis_figures_2_and_3</span> <span class="kn">import</span> <span class="p">(</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">joblib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Parallel</span><span class="p">,</span> <span class="n">delayed</span><span class="p">,</span> <span class="n">parallel_backend</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">PyMPDATA_examples.Arabas_and_Farhat_2020.analysis_figures_2_and_3</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>    <span class="n">error_L2_norm</span><span class="p">,</span>
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="p">)</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span> <span class="nn">PyMPDATA_examples.Arabas_and_Farhat_2020.setup2_american_put</span> <span class="kn">import</span> <span class="n">Settings</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="kn">from</span> <span class="nn">PyMPDATA_examples.Arabas_and_Farhat_2020.simulation</span> <span class="kn">import</span> <span class="n">Simulation</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">PyMPDATA_examples.Arabas_and_Farhat_2020.setup2_american_put</span><span class="w"> </span><span class="kn">import</span> <span class="n">Settings</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">PyMPDATA_examples.Arabas_and_Farhat_2020.simulation</span><span class="w"> </span><span class="kn">import</span> <span class="n">Simulation</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="k">def</span> <span class="nf">compute_row</span><span class="p">(</span><span class="n">simulations</span><span class="p">):</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="k">def</span><span class="w"> </span><span class="nf">compute_row</span><span class="p">(</span><span class="n">simulations</span><span class="p">):</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>    <span class="n">S0</span> <span class="o">=</span> <span class="n">simulations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">S0</span>
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>    <span class="n">T</span> <span class="o">=</span> <span class="n">simulations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">T</span>
 </span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">simulations</span><span class="p">)):</span>
@@ -114,7 +114,7 @@
 </span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a>    <span class="k">return</span> <span class="n">row</span>
 </span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a>
 </span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a>
-</span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a><span class="k">def</span> <span class="nf">table_1_data</span><span class="p">():</span>
+</span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a><span class="k">def</span><span class="w"> </span><span class="nf">table_1_data</span><span class="p">():</span>
 </span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a>    <span class="k">with</span> <span class="n">parallel_backend</span><span class="p">(</span><span class="s2">&quot;threading&quot;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">2</span><span class="p">):</span>
 </span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">Parallel</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="mi">10</span><span class="p">)(</span>
 </span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>            <span class="n">delayed</span><span class="p">(</span><span class="n">compute_row</span><span class="p">)(</span>
@@ -142,7 +142,7 @@
 
     </div>
     <a class="headerlink" href="#compute_row"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="compute_row-11"><a href="#compute_row-11"><span class="linenos">11</span></a><span class="k">def</span> <span class="nf">compute_row</span><span class="p">(</span><span class="n">simulations</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="compute_row-11"><a href="#compute_row-11"><span class="linenos">11</span></a><span class="k">def</span><span class="w"> </span><span class="nf">compute_row</span><span class="p">(</span><span class="n">simulations</span><span class="p">):</span>
 </span><span id="compute_row-12"><a href="#compute_row-12"><span class="linenos">12</span></a>    <span class="n">S0</span> <span class="o">=</span> <span class="n">simulations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">S0</span>
 </span><span id="compute_row-13"><a href="#compute_row-13"><span class="linenos">13</span></a>    <span class="n">T</span> <span class="o">=</span> <span class="n">simulations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">T</span>
 </span><span id="compute_row-14"><a href="#compute_row-14"><span class="linenos">14</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">simulations</span><span class="p">)):</span>
@@ -183,7 +183,7 @@
 
     </div>
     <a class="headerlink" href="#table_1_data"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="table_1_data-37"><a href="#table_1_data-37"><span class="linenos">37</span></a><span class="k">def</span> <span class="nf">table_1_data</span><span class="p">():</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="table_1_data-37"><a href="#table_1_data-37"><span class="linenos">37</span></a><span class="k">def</span><span class="w"> </span><span class="nf">table_1_data</span><span class="p">():</span>
 </span><span id="table_1_data-38"><a href="#table_1_data-38"><span class="linenos">38</span></a>    <span class="k">with</span> <span class="n">parallel_backend</span><span class="p">(</span><span class="s2">&quot;threading&quot;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">2</span><span class="p">):</span>
 </span><span id="table_1_data-39"><a href="#table_1_data-39"><span class="linenos">39</span></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">Parallel</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="mi">10</span><span class="p">)(</span>
 </span><span id="table_1_data-40"><a href="#table_1_data-40"><span class="linenos">40</span></a>            <span class="n">delayed</span><span class="p">(</span><span class="n">compute_row</span><span class="p">)(</span>
